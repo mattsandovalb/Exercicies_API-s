@@ -16,8 +16,6 @@ const colors = {
 	fighting: '#E6E0D4',
 	normal: '#F5F5F5'
 }
-
-
 const mainTypes = Object.keys(colors);
 
 //Funcion que valida el numero de pokemons que le hemos dado en la variable pokemon_count.
@@ -26,7 +24,6 @@ const fetchPokemons = async ()=> {
 		await getPokemon(i);
 	}
 }
-
 
 //Funcion que llama a la API
 const getPokemon = async id => {
@@ -41,12 +38,11 @@ fetchPokemons();
 function createPokemonCard(pokemon){
 	const pokemonEl = document.createElement('div');
 	pokemonEl.classList.add('pokemon');
-
 	const pokeTypes = pokemon.types.map(el => el.type.name);
 	const type = mainTypes.find(type => pokeTypes.indexOf(type)> -1);
 	const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-
-	
+	const color = colors[type];
+	pokemonEl.style.backgroundColor = color;
 
 	const pokeInnerHTML = `
         <div class="img-container">
@@ -64,7 +60,6 @@ function createPokemonCard(pokemon){
     `;
 
 	pokemonEl.innerHTML = pokeInnerHTML;
-
 	poke_container.appendChild(pokemonEl);
 }
 
