@@ -1,26 +1,80 @@
-:root{
-    --principal-color: #305FEB;
-    --secondary-color: #476CEB;
+* {
+  box-sizing: border-box;
+}
+:root {
+  --principal-color: #22254b;
+  --secondary-color: #373b69;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--principal-color);
+  margin: 0;
+}
+.general_container {
+  width: 100%;
+  height: 100vh;
+}
+.header {
+  width: 100%;
+  height: 8%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search {
+  margin-right: 2%;
+  padding-left: 1%;
+  width: 7%;
+  height: 35%;
+  text-align: start;
+  color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.movie_list {
+  margin-top: 1%;
+  display: flex;
+  grid-gap: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+}
+.movie_container {
+  width: 100%;
+}
+.image_div {
+  display: flex;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+.info_text {
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  display: flex;
+  width: 50%;
+  color: white;
+  justify-content: center;
+}
+span {
+  background-color: white;
+  display: flex;
+  width: 15%;
+  justify-content: center;
+  margin-right: 5%;
+  border-radius: 5px;
 }
 
 
-body{
-    background-color: var(--principal-color);
-    margin: 0;
-}
-
-.general_container{
-    width: 100%;
-    height: 100vh;
-}
-
-.header{
-    width: 100%;
-    height: 30%;
-    background-color: blue;
-}
-.search{
-    display: flex;
-    justify-content: flex-end;
-
-}

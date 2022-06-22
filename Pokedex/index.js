@@ -1,5 +1,5 @@
 const poke_container = document.getElementById('poke-container')
-const pokemon_count = 150
+const pokemon_count = 150;
 const colors = {
     fire: '#FDDFDF',
     grass: '#DEFDE0',
@@ -16,6 +16,7 @@ const colors = {
 	fighting: '#E6E0D4',
 	normal: '#F5F5F5'
 }
+
 const mainTypes = Object.keys(colors);
 
 //Funcion que valida el numero de pokemons que le hemos dado en la variable pokemon_count.
@@ -32,13 +33,14 @@ const getPokemon = async id => {
 	const pokemon = await res.json();
 	createPokemonCard(pokemon);
 }
-
 fetchPokemons();
+
 //Funcion que añade el pokemon al HTML
 function createPokemonCard(pokemon){
 	const pokemonEl = document.createElement('div');
 	pokemonEl.classList.add('pokemon');
-	const pokeTypes = pokemon.types.map(el => el.type.name);
+	const pokeTypes = pokemon.types.map(el => el.type.name); //map: mapear/for/foreach
+	// console.log(pokemon.types);
 	const type = mainTypes.find(type => pokeTypes.indexOf(type)> -1);
 	const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 	const color = colors[type];
