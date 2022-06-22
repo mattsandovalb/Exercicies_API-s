@@ -1,0 +1,26 @@
+:root{
+    --principal-color: #305FEB;
+    --secondary-color: #476CEB;
+}
+
+
+body{
+    background-color: var(--principal-color);
+    margin: 0;
+}
+
+.general_container{
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    width: 100%;
+    height: 30%;
+    background-color: blue;
+}
+.search{
+    display: flex;
+    justify-content: flex-end;
+
+}
